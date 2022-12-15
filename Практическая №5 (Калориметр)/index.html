@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="style/styles.css">
+    <title>Калориметр приема пищи</title>
+        <link rel="shortcut icon" href="images/donut favicon.png" type="image/x-icon">
+</head>
+<body>
+<section class="container">
+    <h1>Калориметр приема пищи</h1>
+    <form method="post" class="calorimeter-form">
+        <!--Элемент <form> определяет способ отправки данных.Атрибут method определяет способ отправки данных. атрибут POST заполняется содержимое этого массива из "заголовков запроса". То есть из места, скрытого от глаз в явном виде. 
+            GET - это чтобы получить определенную страницу в определенном виде ( сортировка, текущая страница в блоге, строка поиска и т.п. ).
+            POST - для оправки данных которые не влияют на отображение страницы, в том плане что эти данные влияют только на результат выполнения скрипта ( логины, пароли, номера кредиток, сообщения и т.п. ). -->
+        <div class="form-group">
+            <label for="meal">Выберите ингредиент:</label> <!-- label представляет собой подпись к элементу  -->
+            <select name="meal" id="meal">
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="button">Добавить в список</button>
+        </div>
+    </form>
+    <div class="table__wrapper">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Наименование ингредиента</th>
+                    <th>Количество</th>
+                    <th>Калорийность</th>
+                    <th>Общая калорийность</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="form-group">
+            <div class="form-group-buttons">
+                <button typeof="button" id="calculate-button" type="submit">Расчитать</button>
+                <button typeof="button" id="сlear-button" type="submit">Очистить</button>
+            </div>
+            <span id="total-caloric-content">Прием пищи составит: 0 кКал</span>
+        </div>
+    </div>
+</section>
+</body>
+</html>
